@@ -143,9 +143,9 @@ int main ()
 		printf("Escolha a opção desejada:\n\n");
 		printf("\t 1 - Registrar Nomes.\n\n");
 		printf("\t 2 - Consultar Nomes.\n\n");
-		printf("\t 3 - Excluir Nomes.\n\n");										
+		printf("\t 3 - Excluir Nomes.\n\n");
+		printf("\t 4 - SAIR \n\n ");										
 		printf("Opção:");															//Final Menu
-		//printf("\n\n\n\n\t\t\t This Software is Powered By:  Theobaldo.R");
 		scanf("%d", &opcao);														// Escolha do usuario
 		
 	
@@ -167,6 +167,12 @@ int main ()
 				deletar();															//chamada de função
 			break;																	// final da função caso seja 3
 			
+			case 4:
+				printf(" \t\t OBRIGADO POR UTILIZAR O SISTEMA. \n\n\n\n");	
+				return 0;
+			break;
+				
+										
 			default:																//reorna valor padrão caso nenhuma opçao acima seja efetivada
 				printf(" !!!    Opção invalida    !!!  \n\n\n");					//comunicando falha na escolha de opção
 				system("pause");
