@@ -1,18 +1,18 @@
-#include <stdio.h>       //biblioteca de comunicação com o usuário.
-#include <stdlib.h>	     //biblioteca de alocação de memória.Criar banco de dados na maquina
-#include <locale.h>	     //biblioteca de alocações de texto por região.
-#include <string.h>		 //biblioteca de administração de strings
+#include <stdio.h>       //biblioteca de comunicaÃ§Ã£o com o usuÃ¡rio.
+#include <stdlib.h>	     //biblioteca de alocaÃ§Ã£o de memÃ³ria.Criar banco de dados na maquina
+#include <locale.h>	     //biblioteca de alocaÃ§Ãµes de texto por regiÃ£o.
+#include <string.h>		 //biblioteca de administraÃ§Ã£o de strings
 
 int
- registro()																		// Função de Registrar Nomes
+ registro()																		// FunÃ§Ã£o de Registrar Nomes
 {
-	char arquivo[40];														//inicio de criação de variaveis tipo string
+	char arquivo[40];														//inicio de criaÃ§Ã£o de variaveis tipo string
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
-	char cargo[40];															//final de criação de variaveis tipo string
+	char cargo[40];															//final de criaÃ§Ã£o de variaveis tipo string
 	
-	printf("Digite o CPF a ser cadastrado: \n");							// coletar informação do usuario 
+	printf("Digite o CPF a ser cadastrado: \n");							// coletar informaÃ§Ã£o do usuario 
 	printf("CPF: ");	
 	scanf("%s", cpf);														//%s refere-se a strings
 	
@@ -63,7 +63,7 @@ int
 }
 
 
-int consulta()																	//função de Consultar Nomes
+int consulta()																	//funÃ§Ã£o de Consultar Nomes
 {
 	setlocale(LC_ALL, "Portuguese");
 	
@@ -79,12 +79,12 @@ int consulta()																	//função de Consultar Nomes
 	if(file == NULL)															//verificando se o CPF existe
 	{
 		printf("\n\n");
-		printf("CPF NÃO ENCONTRADO !!! \n\n\n");	
+		printf("CPF NÃƒO ENCONTRADO !!! \n\n\n");	
 	}
 
-	while(fgets(conteudo,200,file) != NULL)										//buscando ate 200 caracteres dentro do arquivo até for nulo
+	while(fgets(conteudo,200,file) != NULL)										//buscando ate 200 caracteres dentro do arquivo atÃ© for nulo
 	{
-		printf("\n Informações do usuário selecionado: ");
+		printf("\n InformaÃ§Ãµes do usuÃ¡rio selecionado: ");
 		printf("%s", conteudo);
 		printf("\n\n");
 	}
@@ -93,7 +93,7 @@ int consulta()																	//função de Consultar Nomes
 }
 
 
-int deletar()																	//função de Deletar Nomes
+int deletar()																	//funÃ§Ã£o de Deletar Nomes
 {
 	char cpf[40];
 	
@@ -107,7 +107,7 @@ int deletar()																	//função de Deletar Nomes
 	
 	if (file == NULL)															// Se o cpf nao tiver cadastrado exibe mensagem
 	{
-		printf("\t\n\n Usuario não encontrado !! \n\n");
+		printf("\t\n\n Usuario nÃ£o encontrado !! \n\n");
 		system("pause");
 	}
 
@@ -116,14 +116,14 @@ int deletar()																	//função de Deletar Nomes
 	
 	if (file != NULL)
 	{
-		printf("\t\n\n Usuario Deletado com Sucesso ! \n\n\n");						// caso encontrado mensagem de confirmação de exclusão
+		printf("\t\n\n Usuario Deletado com Sucesso ! \n\n\n");						// caso encontrado mensagem de confirmaÃ§Ã£o de exclusÃ£o
 		system("pause");
 	}
 }
 
 
 
-int main ()																		//Função Principal - Tela de MENU
+int main ()																		//FunÃ§Ã£o Principal - Tela de MENU
 {
 	int opcao=0;																	//Definindo as variaveis  do menu
 	int loop=1;
@@ -132,7 +132,7 @@ int main ()																		//Função Principal - Tela de MENU
 	
 	setlocale(LC_ALL, "Portuguese");
 	
-	printf("\t\t\t\t_____  Cartório da EBAC  _____ \n\n");
+	printf("\t\t\t\t_____  CartÃ³rio da EBAC  _____ \n\n");
 	printf("LOGIN DE ADMIN !! \n\n Digite a senha: ");
 	scanf("%s",getpassword);
 	
@@ -148,33 +148,33 @@ int main ()																		//Função Principal - Tela de MENU
 		
 			setlocale(LC_ALL, "Portuguese");											//Setando a lingua de saida para PORTUGUES
 	
-			printf("\t\t\t\t_____  Cartório da EBAC  _____ \n\n");						//Inicio Menu
-			printf("Escolha a opção desejada:\n\n");
+			printf("\t\t\t\t_____  CartÃ³rio da EBAC  _____ \n\n");						//Inicio Menu
+			printf("Escolha a opÃ§Ã£o desejada:\n\n");
 			printf("\t 1 - Registrar Nomes.\n\n");
 			printf("\t 2 - Consultar Nomes.\n\n");
 			printf("\t 3 - Excluir Nomes.\n\n");
 			printf("\t 4 - SAIR \n\n ");										
-			printf("Opção:");															//Final Menu
+			printf("OpÃ§Ã£o:");															//Final Menu
 			scanf("%d", &opcao);														// Escolha do usuario
 		
 	
 		
 		
-			system("cls");																// limpando a tela após escolha do menu
+			system("cls");																// limpando a tela apÃ³s escolha do menu
 	
-				switch(opcao)															// inicio da seleção do menu
+				switch(opcao)															// inicio da seleÃ§Ã£o do menu
 				{
 				case 1:
-					registro();															//chamada de função
-				break;																	//final da função caso seja 1
+					registro();															//chamada de funÃ§Ã£o
+				break;																	//final da funÃ§Ã£o caso seja 1
 			
 				case 2:
-					consulta();															//chamada de função
-				break;																	//final da função caso seja 2
+					consulta();															//chamada de funÃ§Ã£o
+				break;																	//final da funÃ§Ã£o caso seja 2
 			
 				case 3:
-					deletar();															//chamada de função
-				break;																	// final da função caso seja 3
+					deletar();															//chamada de funÃ§Ã£o
+				break;																	// final da funÃ§Ã£o caso seja 3
 			
 				case 4:
 					printf(" \t\t OBRIGADO POR UTILIZAR O SISTEMA. \n\n\n\n");			//mensagem de saida do programa
@@ -182,8 +182,8 @@ int main ()																		//Função Principal - Tela de MENU
 				break;
 				
 										
-				default:																//reorna valor padrão caso nenhuma opçao acima seja efetivada
-					printf(" !!!    Opção invalida    !!!  \n\n\n");					//comunicando falha na escolha de opção
+				default:																//reorna valor padrÃ£o caso nenhuma opÃ§ao acima seja efetivada
+					printf(" !!!    OpÃ§Ã£o invalida    !!!  \n\n\n");					//comunicando falha na escolha de opÃ§Ã£o
 					system("pause");
 				break;
 	
